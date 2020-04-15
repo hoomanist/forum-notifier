@@ -15,7 +15,7 @@ if os.path.exists("/home/hooman/forum.last"):
     with open("forum.last","r") as file:
         ll = file.read()
         if not ll == str(last_date) + str(last_title):
-            os.system("notify-send 'new massage'")
+            os.system("notify-send 'new massage' && cvlc $HOME/audio.mp3")
 with open("/home/hooman/forum.last","w") as file:
     out = str(last_date) + str(last_title)
     file.write(out)

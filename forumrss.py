@@ -11,12 +11,12 @@ for i in items:
     dates.append(i["link"])
 last_title = titles[0]
 last_date = dates[0]
-if os.path.exists("/home/hooman/forum.last"):
+if os.path.exists("$HOME/forum.last"):
     with open("forum.last","r") as file:
         ll = file.read()
         if not ll == str(last_date) + str(last_title):
             os.system("notify-send 'new massage' && cvlc $HOME/audio.mp3")
-with open("/home/hooman/forum.last","w") as file:
+with open("$HOME/forum.last","w") as file:
     out = str(last_date) + str(last_title)
     file.write(out)
 
